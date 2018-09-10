@@ -15,6 +15,15 @@ class Question {
       { answer: 0 }
     );
   }
+
+  getQuestion(_id) {
+    return this.Question.findOne(
+      {
+        _id
+      },
+      { answer: 1, type: 1 }
+    );
+  }
 }
 
 export default Question;
