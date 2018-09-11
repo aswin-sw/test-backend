@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Mongoose } from 'mongoose';
 
 const assessmentSchema = mongoose.Schema({}, { strict: false });
 
@@ -9,6 +9,10 @@ class Assessment {
 
   get(_id) {
     return this.Assessment.findOne({ _id });
+  }
+
+  update(_id, assessment) {
+    return this.Assessment.update({ _id: _id }, assessment);
   }
 }
 

@@ -24,6 +24,11 @@ class Question {
       { answer: 1, type: 1 }
     );
   }
+
+  add(question) {
+    let q = new this.Question(question);
+    return q.save();
+  }
 }
 
 export default Question;

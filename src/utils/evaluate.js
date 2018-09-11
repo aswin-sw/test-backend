@@ -1,4 +1,4 @@
-const evaluateMCQ = (answer, uAnswer) => answer === uAnswer;
+const evaluateMCQ = (answer, uAnswer) => answer == uAnswer;
 
 const evaluateMapper = {
   mcq: evaluateMCQ

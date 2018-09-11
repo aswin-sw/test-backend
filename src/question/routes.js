@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 router.post('/evaluate', async (req, res) => {
   try {
     let { qid, answer } = req.body;
-    if (!qid || !answer) {
+    if (!qid || answer === undefined) {
       return res.send('insufficied params');
     }
     let question = new Question();
